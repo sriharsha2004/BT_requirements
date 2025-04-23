@@ -1,0 +1,9 @@
+git checkout -b new-branch
+
+
+• git branch new-branch → Creates a new branch but does not switch to it.
+• git checkout new-branch → Switches to the new branch.
+• git checkout -b new-branch → Combines both steps in one command.
+• 
+
+The -b flag stands for "create and switch" to a new branch.

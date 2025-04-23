@@ -1,0 +1,17 @@
+private_repo_setup
+
+
+add to ~/.gitconfig:
+---------------------
+[url "git link"]
+        insteadOf = git link
+ 
+add to ~/.netrc:
+---------------------
+machine git link login <user> password <password> 
+ 
+where <password> = Personal Access Token from Gitlab
+ 
+run the following command
+---------------------
+go env -w GOPRIVATE = git link

@@ -1,0 +1,18 @@
+Installation_commnads_budgettracker.txt
+
+GO INSTALL : 
+wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvzf go1.23.4.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+go version
+NODE INSTALL : 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc 
+nvm install 12.22.9
+node -v
+NPM INSTALL
+The node installtion will also install npm of some version
+To change version we can use
+npm install -g npm@8.5.1
+npm  -v

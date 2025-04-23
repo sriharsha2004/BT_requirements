@@ -1,0 +1,18 @@
+Testing_go_packages.txt
+
+*.test files are used for testing
+To run these files use : go test 
+This command will automatically run all methods in the *.test files , which start with Test
+ 
+ 
+If we want to execute methods  automatically when we run go test 
+We should start methods with Test , eg: TestmethodName() 
+And should take one and only argument : t *testing.T 
+Should not return any values
+All the methods with this will execute
+And also the method name after Test keyword should start with a capital letter : 
+Eg: Testsetup is a wrong test method , TestSetup is a valid test method
+ 
+ 
+If we do not follow above rules , those methods will not be treated as test methods , and those will not be executed when we run :
+go test

@@ -1,0 +1,68 @@
+Pushing_into_git.txt
+
+1. Stash Your Local Changes (optional, but safer):
+Before pulling the changes, it's a good idea to stash your changes so that you don’t lose anything.
+
+git stash
+This will temporarily save your local changes in a "stash" so you can apply them later.
+2. Pull the Latest Changes from the Remote Repository:
+Now that your changes are stashed, you can safely pull the changes made by the other person.
+
+git pull
+This should fetch the latest updates from the remote and merge them into your local branch.
+3. Apply Your Stashed Changes:
+Now, you can reapply your local changes on top of the newly pulled changes.
+
+git stash pop
+At this point, there could still be conflicts between your changes and the ones pulled from the remote. Git will mark the conflicting files and ask you to resolve them.
+4. Resolve Merge Conflicts:
+Open the conflicting files. Git will mark the conflicting parts with special markers like this:
+
+<<<<<<< HEAD
+Your changes here
+=======
+Other person’s changes here
+>>>>>>> [commit hash]
+You need to manually edit the files to keep the changes you want and remove the markers.
+After resolving the conflicts, save the files.
+5. Stage the Resolved Files:
+Once you've resolved the conflicts, stage the files for commit.
+
+git add <filename>
+or if you’ve resolved all conflicts:
+
+
+git add .
+6. Commit the Changes:
+Commit the merge resolution.
+
+
+git commit -m "Resolved merge conflicts and merged changes from remote"
+7. Push Your Changes (if needed):
+Finally, if everything looks good and you want to push the changes to the remote repository:
+
+git push
+That should merge both sets of changes and allow you to move forward without losing any work! Would you like more details on any of the steps?
+
+
+
+
+
+If faced Issue while pushing :
+
+
+Option 1: Rebase (Recommended for a cleaner history)
+Rebasing will apply your local commit on top of the remote commits, keeping a cleaner, linear history.
+	1. First, ensure you have the latest remote changes:
+	2. git fetch
+	3. Rebase your local changes onto the remote branch:
+
+git rebase origin/Harsha
+
+During the rebase process, if there are conflicts, Git will stop and allow you to resolve them. After resolving conflicts, continue the rebase:
+	git rebase --continue
+	4. Once the rebase is complete, push your changes:
+
+git push
+
+NOTE : To review changes made at the gitswarm , close that and open that again 
